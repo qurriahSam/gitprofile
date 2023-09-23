@@ -8,13 +8,15 @@ const ListItem = ({ year, name, body, link }) => (
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{year}</div>
+    <div className="flex justify-between">
+      <h3 className="font-normal">{body}</h3>
+      <div className="my-0.5 text-xs">{year}</div>
+    </div>
     <div className="font-semibold">
       <a href={link} target="_blank" rel="noreferrer">
         {name}
       </a>
     </div>
-    <h3 className="mb-4 font-normal">{body}</h3>
   </li>
 );
 
