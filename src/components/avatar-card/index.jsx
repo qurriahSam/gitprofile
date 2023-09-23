@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { fallbackImage, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
+import self from '../../assets/self.jpg';
 
 const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
   return (
@@ -27,7 +28,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
             >
               {
                 <LazyImage
-                  src={profile.avatar ? profile.avatar : fallbackImage}
+                  src={profile.avatar ? self : fallbackImage}
                   alt={profile.name}
                   placeholder={skeleton({
                     width: 'w-full',
@@ -52,7 +53,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
           <div className="mt-3 text-base-content text-opacity-60 font-mono">
             {loading || !profile
               ? skeleton({ width: 'w-48', height: 'h-5' })
-              : profile.bio}
+              : 'Full Stack | MEAN | MERN | Software Developer'}
           </div>
         </div>
         {resume?.fileUrl &&
