@@ -2,112 +2,180 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
+    username: 'qurriahSam', // Your GitHub org/user name. (Required)
+    sortBy: 'updated', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
-      forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      forks: true, // Forked projects will not be displayed if set to true.
+      projects: [
+        'alx-low_level_programming',
+        'alx-higher_level_programming',
+        'dsa-c',
+        'qurriahSam',
+        'ng-todo',
+        'fcc-urlShortener-microservice',
+      ], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'sam-kuria',
+    twitter: '',
+    mastodon: '',
     facebook: '',
     instagram: '',
     youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: 'sammugire',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://arifszn.com',
+    website: '',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'sammugire@gmail.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://docs.google.com/document/d/1CYNWssZUwzitgcx_ehhBkyuz02CnoxWK/edit?usp=sharing&ouid=100494749741352440798&rtpof=true&sd=true', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
     'JavaScript',
+    'TypeScript',
     'React.js',
     'Node.js',
-    'Nest.js',
+    'Express.js',
+    'Angular',
+    'Python',
+    'Ruby',
+    'Ruby On Rails',
+    'C',
+    'MongoDB',
     'MySQL',
-    'PostgreSQL',
     'Git',
-    'Docker',
-    'PHPUnit',
     'CSS',
-    'Antd',
     'Tailwind',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'SkillReactor',
+      position: 'Virtual Work Experience Platform',
+      from: 'Jan 2022',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://www.skillreactor.io',
+      tasks: ['Building projects to showcase skills.'],
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'iTalanta',
+      position: 'Software Developer Intern',
+      from: 'Sept 2022',
+      to: 'December 2022',
+      companyLink: 'https://italanta.net',
+      tasks: [
+        'Using AngularJs and angular material to build the frontend.',
+        'Involved in adding bot translations in english and french.',
+        'Implemented block layouts and functionality.',
+      ],
     },
   ],
-  /* certifications: [
+  certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com'
+      name: "Backend Development & API'S",
+      body: 'FreeCodeCamp',
+      year: 'May 2023',
+      link: 'https://www.freecodecamp.org/certification/qurriah/back-end-development-and-apis',
     },
-  ], */
+    {
+      name: 'JavaScript Alogrithms & DataStructures',
+      body: 'FreeCodeCamp',
+      year: 'Nov 2021',
+      link: 'https://www.freecodecamp.org/certification/qurriah/javascript-algorithms-and-data-structures',
+    },
+    {
+      name: 'Responsive Web Design',
+      body: 'FreeCodeCamp',
+      year: 'May 2021',
+      link: 'https://www.freecodecamp.org/certification/qurriah/responsive-web-design',
+    },
+    {
+      name: 'Computer Science',
+      body: 'ACWICT',
+      year: 'March 2021',
+      link: 'https://drive.google.com/file/d/1ysh_iHkgsFywYFkIT1n6SpdVTSdR3USL/view?usp=share_link',
+    },
+    {
+      name: 'Wordpress Websites',
+      body: 'Junior Achievement Africa',
+      year: 'Dec 2020',
+      link: 'https://drive.google.com/file/d/1YXDF05IXGbMAo395huhAEu6WlIlSY2q8/view?usp=share_link',
+    },
+  ],
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'ALX-SE',
+      degree: 'Software Engineering Bootcamp',
+      from: 'July 2023',
+      to: 'present',
+      tasks: [
+        'C programming',
+        'Data Structures & Algorithims',
+        'Bit Manipulation',
+        'Memory Management',
+      ],
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Moringa School',
+      degree: 'Software Engineering Bootcamp',
+      from: 'Feb 2022',
+      to: 'Aug 2022',
+      tasks: ['HTML, CSS3 & JavaScript', 'React & Ruby on Rails'],
+    },
+    {
+      institution: 'Moi University',
+      degree: 'Bachelors in Business Information Technology',
+      from: 'Sep 2015',
+      to: 'Dec 2018',
+      tasks: [
+        'Fundamentals of Computer Systems',
+        'Object Oriented Programming',
+        'Networks and Data Communication',
+      ],
     },
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Muz!ki',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+        'Mooz!ki for music lovers enables users to upload, explore and discover new music.',
       imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+      link: 'https://github.com/qurriahSam/muziki',
     },
     {
-      title: 'Project Name',
+      title: 'Header-Parser-Microservice',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+        'Convenient and efficient means for users to retrieve and view critical information pertaining to their IP address, language, and software configuration.',
       imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+      link: 'https://github.com/qurriahSam/fcc-header-parser-microservice',
+    },
+    {
+      title: 'Ng-ToDo',
+      description: 'A simple and efficient to-do list manager',
+      imageUrl: 'https://via.placeholder.com/250x250',
+      link: 'https://github.com/qurriahSam/ng-todo',
+    },
+    {
+      title: 'URL.Shortener-Microservice',
+      description: 'A microservice that shortens links provided',
+      imageUrl: 'https://via.placeholder.com/250x250',
+      link: 'https://github.com/qurriahSam/fcc-urlShortener-microservice',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    source: 'medium', // medium | dev
+    username: 'sammugire', // to hide blog section, keep it empty
     limit: 2, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
@@ -119,11 +187,11 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'wireframe',
+    defaultTheme: 'retro',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
