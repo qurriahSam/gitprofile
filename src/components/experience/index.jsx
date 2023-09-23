@@ -2,19 +2,26 @@ import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const ListItem = ({ time, position, company, companyLink }) => (
+const ListItem = ({ time, position, company, companyLink, tasks }) => (
   <li className="mb-5 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{time}</div>
-    <h3 className="font-semibold">{position}</h3>
-    <div className="mb-4 font-normal">
-      <a href={companyLink} target="_blank" rel="noreferrer">
-        {company}
-      </a>
+    <div className="flex justify-between">
+      <div className="font-semibold">
+        <a href={companyLink} target="_blank" rel="noreferrer">
+          {company}
+        </a>
+      </div>
+      <div className="my-0.5 text-xs">{time}</div>
     </div>
+    <h3 className="italic">{position}</h3>
+    <ul className="list-disc ms-6 text-sm">
+      {tasks?.map((task, index) => {
+        return <li key={index}>{task}</li>;
+      })}
+    </ul>
   </li>
 );
 
@@ -72,6 +79,7 @@ const Experience = ({ experiences, loading }) => {
                         companyLink={
                           experience.companyLink ? experience.companyLink : null
                         }
+                        tasks={experience.tasks}
                       />
                     ))}
                   </Fragment>
@@ -90,6 +98,7 @@ ListItem.propTypes = {
   position: PropTypes.node,
   company: PropTypes.node,
   companyLink: PropTypes.string,
+  tasks: PropTypes.array,
 };
 
 Experience.propTypes = {
