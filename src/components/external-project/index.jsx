@@ -2,6 +2,10 @@ import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
+import headerParser from '../../assets/projects/header-parser.png';
+import muziki from '../../assets/projects/muziki.png';
+import todo from '../../assets/projects/todo.png';
+import urlShortner from '../../assets/projects/url-shortner.png';
 
 const displaySection = (externalProjects) => {
   if (
@@ -105,7 +109,17 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
                     <div className="avatar opacity-90">
                       <div className="w-20 h-20 mask mask-squircle">
                         <LazyImage
-                          src={item.imageUrl}
+                          src={
+                            item.imageUrl == 'muziki'
+                              ? muziki
+                              : item.imageUrl == 'todo'
+                              ? todo
+                              : item.imageUrl == 'urlShortner'
+                              ? urlShortner
+                              : item.imageUrl == 'headerParser'
+                              ? headerParser
+                              : null
+                          }
                           alt={'thumbnail'}
                           placeholder={skeleton({
                             width: 'w-full',
@@ -119,6 +133,16 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
                   <p className="mt-1 text-base-content text-opacity-60 text-sm">
                     {item.description}
                   </p>
+                  <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
+                    {item.tags.map((item, index) => (
+                      <div
+                        className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 text-base-content"
+                        key={index}
+                      >
+                        #{item}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

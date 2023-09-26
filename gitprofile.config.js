@@ -149,27 +149,31 @@ const config = {
       title: 'Muz!ki',
       description:
         'Mooz!ki for music lovers enables users to upload, explore and discover new music.',
-      imageUrl: 'https://via.placeholder.com/250x250',
+      imageUrl: 'muziki',
       link: 'https://github.com/qurriahSam/muziki',
+      tags: ['React', 'Ruby On Rails'],
     },
     {
       title: 'Header-Parser-Microservice',
       description:
         'Convenient and efficient means for users to retrieve and view critical information pertaining to their IP address, language, and software configuration.',
-      imageUrl: 'https://via.placeholder.com/250x250',
+      imageUrl: 'headerParser',
       link: 'https://github.com/qurriahSam/fcc-header-parser-microservice',
+      tags: ['NodeJs', 'ExpressJs', 'MongoDB'],
     },
     {
       title: 'Ng-ToDo',
       description: 'A simple and efficient to-do list manager',
-      imageUrl: 'https://via.placeholder.com/250x250',
+      imageUrl: 'todo',
       link: 'https://github.com/qurriahSam/ng-todo',
+      tags: ['Angular', 'localStorage'],
     },
     {
       title: 'URL.Shortener-Microservice',
       description: 'A microservice that shortens links provided',
-      imageUrl: 'https://via.placeholder.com/250x250',
+      imageUrl: 'urlShortner',
       link: 'https://github.com/qurriahSam/fcc-urlShortener-microservice',
+      tags: ['NodeJs', 'ExpressJs', 'MongoDB'],
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
@@ -247,11 +251,11 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
+  footer: `&copy <a 
+      class="text-primary" href="https://github.com/qurriahSam"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+    >Sam_Kuriah</a> 2023`,
 };
 
 export default config;
