@@ -36,8 +36,7 @@ const config = {
     email: 'sammugire@gmail.com',
   },
   resume: {
-    fileUrl:
-      'https://docs.google.com/document/d/1CYNWssZUwzitgcx_ehhBkyuz02CnoxWK/edit?usp=sharing&ouid=100494749741352440798&rtpof=true&sd=true', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: 'src/assets/KuriaSamResume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
@@ -58,14 +57,6 @@ const config = {
   ],
   experiences: [
     {
-      company: 'SkillReactor',
-      position: 'Virtual Work Experience Platform',
-      from: 'Jan 2022',
-      to: 'Present',
-      companyLink: 'https://www.skillreactor.io',
-      tasks: ['Building projects to showcase skills.'],
-    },
-    {
       company: 'iTalanta',
       position: 'Software Developer Intern',
       from: 'Sept 2022',
@@ -75,6 +66,29 @@ const config = {
         'Using AngularJs and angular material to build the frontend.',
         'Involved in adding bot translations in english and french.',
         'Implemented block layouts and functionality.',
+      ],
+    },
+    {
+      company: 'Remotasks',
+      position: 'LiDar Data Annotator',
+      from: 'Aug 2020',
+      to: 'Nov 2021',
+      companyLink: 'https://www.remotasks.com/en',
+      tasks: [
+        'Tasked with providing high-quality annotations for training data used to develop and improve AI models.',
+        'Involved in training new members on more complex tasks ( Lidar and Videobox Annotations ).',
+      ],
+    },
+    {
+      company: 'Kenya Vision 2030 Secretariat',
+      position: 'IT Support Specialist',
+      from: 'Jan 2017',
+      to: 'Apr 2018',
+      companyLink: 'https://vision2030.go.ke',
+      tasks: [
+        'Made recommended changes on the company website.',
+        'Provided technical assistance to employees of the company.',
+        'Provided routine computer maintenance, troubleshooted computer issues, and set up user accounts.',
       ],
     },
   ],
