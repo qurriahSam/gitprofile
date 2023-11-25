@@ -60,66 +60,68 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
   };
 
   const renderProjects = () => {
-    return repo.map((item, index) => (
-      <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
-        href={item.html_url}
-        key={index}
-        onClick={(e) => {
-          e.preventDefault();
+    return repo
+      .filter((item) => item.description != null)
+      .map((item, index) => (
+        <a
+          className="card shadow-lg compact bg-base-100 cursor-pointer"
+          href={item.html_url}
+          key={index}
+          onClick={(e) => {
+            e.preventDefault();
 
-          try {
-            if (googleAnalytics?.id) {
-              ga.event({
-                action: 'Click project',
-                params: {
-                  project: item.name,
-                },
-              });
+            try {
+              if (googleAnalytics?.id) {
+                ga.event({
+                  action: 'Click project',
+                  params: {
+                    project: item.name,
+                  },
+                });
+              }
+            } catch (error) {
+              console.error(error);
             }
-          } catch (error) {
-            console.error(error);
-          }
 
-          window?.open(item.html_url, '_blank');
-        }}
-      >
-        <div className="flex justify-between flex-col p-8 h-full w-full">
-          <div>
-            <div className="flex items-center">
-              <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
-                <MdInsertLink className="my-auto" />
-                <span>{item.name}</span>
+            window?.open(item.html_url, '_blank');
+          }}
+        >
+          <div className="flex justify-between flex-col p-8 h-full w-full">
+            <div>
+              <div className="flex items-center">
+                <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
+                  <MdInsertLink className="my-auto" />
+                  <span>{item.name}</span>
+                </div>
+              </div>
+              <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
+                {item.description}
+              </p>
+            </div>
+            <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
+              <div className="flex flex-grow">
+                <span className="mr-3 flex items-center">
+                  <AiOutlineStar className="mr-0.5" />
+                  <span>{item.stargazers_count}</span>
+                </span>
+                <span className="flex items-center">
+                  <AiOutlineFork className="mr-0.5" />
+                  <span>{item.forks_count}</span>
+                </span>
+              </div>
+              <div>
+                <span className="flex items-center">
+                  <div
+                    className="w-3 h-3 rounded-full mr-1 opacity-60"
+                    style={{ backgroundColor: languageColor(item.language) }}
+                  />
+                  <span>{item.language}</span>
+                </span>
               </div>
             </div>
-            <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
-              {item.description}
-            </p>
           </div>
-          <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
-            <div className="flex flex-grow">
-              <span className="mr-3 flex items-center">
-                <AiOutlineStar className="mr-0.5" />
-                <span>{item.stargazers_count}</span>
-              </span>
-              <span className="flex items-center">
-                <AiOutlineFork className="mr-0.5" />
-                <span>{item.forks_count}</span>
-              </span>
-            </div>
-            <div>
-              <span className="flex items-center">
-                <div
-                  className="w-3 h-3 rounded-full mr-1 opacity-60"
-                  style={{ backgroundColor: languageColor(item.language) }}
-                />
-                <span>{item.language}</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </a>
-    ));
+        </a>
+      ));
   };
 
   return (
