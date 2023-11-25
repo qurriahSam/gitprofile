@@ -36,7 +36,7 @@ const config = {
     email: 'sammugire@gmail.com',
   },
   resume: {
-    fileUrl: 'src/assets/KuriaSamResume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: './src/assets/KuriaSamResume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
@@ -205,7 +205,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'retro',
+    defaultTheme: 'halloween',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
